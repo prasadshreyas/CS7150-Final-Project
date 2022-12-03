@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=5]
+% function defs
+\def\normalmixQ{\x, {
+0.4 * exp( -((\x-0.21)^2)/ (2 * 0.08 * 0.08) ) + 
+0.6 * exp( -((\x-0.59)^2)/ (2 * 0.08 * 0.08) )
+}}
+\def\normalmixP{\x, {
+0.01 * exp( -((\x-0.19)^2)/ (2 * 0.08 * 0.08) ) + 
+0.65 * exp( -((\x-0.5)^2)/ (2 * 0.08 * 0.08) ) + 
+0.34 * exp( -((\x-0.85)^2)/ (2 * 0.05 * 0.05) )
+}}
+
+% Plot
+\draw[thick,color=royalazure!70, preaction={fill=blue!60, fill opacity=0.2}, fill opacity=0.2, pattern=fivepointed stars, pattern color=blue, domain=0.15:1.1,smooth] (0, 0) -- (0.15, 0) -- plot (\normalmixP) -- (1, 0);
+\draw[thick,color=harvardcrimson!70, preaction={fill=red!60, fill opacity=0.2}, fill opacity=0.2, pattern=dots, pattern color=red, domain=0:0.87,smooth] (0, 0) -- plot (\normalmixQ) -- (0.87, 0) -- (1, 0);
+
+% Axes
+\draw[thick,->] (0,0) -- (1.2,0) node[below, xshift=-3.5cm] {\fontfamily{cmss}\selectfont Text};
+\draw[thick,->] (0,0) -- (0,0.7) node[left, rotate=90, xshift=-0.8cm, yshift=0.23cm] {\fontfamily{cmss}\selectfont Probability};
+
+% Labels
+\node(plabel) at (0.84, 0.38) {$P$};
+\node(qlabel) at (0.15, 0.4) {$Q$};
+
+% Text 
+\node[draw, align=left, xshift=-2.5cm, yshift=-0.5cm, at=(qlabel), scale=0.8](q_ex_text) {
+    \fontfamily{cmss}\selectfont
+    \textbf{Type I Error}: \\ 
+    The time is \\ the time is \\ the time is \\ the time $\cdots$
+};
+
+\node[draw, align=left, xshift=2.3cm, yshift=-0.5cm, at=(plabel), scale=0.8](p_ex_text) {
+    \fontfamily{cmss}\selectfont
+    \textbf{Type II Error}: \\ 
+    I just visited  \\
+    Utqiagvik and \\
+    Nuchalawoyya \\
+    in Alaska.
+};
+
+% Example text in plot
+\draw[color=harvardcrimson!90, fill] (0.1, 0) circle (0.55pt) {};
+\draw[color=royalazure!90, fill] (0.9, 0) circle (0.55pt)  {};
+
+% Arrow from example dot in figure to example text on the side
+\draw[->, dotted, very thick, color=harvardcrimson] (0.1, 0) to[out=225, in=300] (q_ex_text.270) {};
+
+\draw[->, dotted, very thick, color=royalazure] (0.9, 0) to[out=300, in=265] (p_ex_text.270) {};
+
+
+\end{tikzpicture}

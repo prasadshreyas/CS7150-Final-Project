@@ -1,0 +1,72 @@
+\begin{tikzpicture}
+
+% draw the surface
+% \shade[left color=gray!60,right color=gray!10] 
+%   (0,0) to[out=50,in=180] (3.5, 1.25) to[out=75,in=225] (4.5, 3.3) to[out=175,in=25] (1, 2.8) to[out=-135,in=90] (0, 0);
+\shade[left color=gray!60,right color=gray!10] 
+  (0,0.5) to[out=70,in=105] (3.5, 0.55) to[out=95,in=155] (5.2, 2.3) to[out=115,in=45] (1, 2.7) to[out=-135,in=90] (0, 0.5);
+% \shade[left color=gray!60,right color=gray!10] 
+%   (0,1) to[out=70,in=105] (2.8, 0.75) to[out=85,in=155] (5.2, 1.7)
+%   .. controls (2.8,3.7) and (1.5,3.7) ..  (0, 1); 
+
+% \draw[fill=black] (2.4, 3.2) circle (2pt) ;
+
+% distribution points and line joining them
+\draw[thick] (0.8, 2) 
+    to[out=60 , in=190] (2.4, 2.9)
+    to[out=0,in=150] (3.9, 2.4);
+
+\draw[color=royalazure, fill,rotate around={50:(0.8,2)}] (0.8,2) ellipse (2.1pt and 1pt) node[label={[shift={(0.1,0.15)},text=black]270:{$P$}}] (p_manif) {};
+% \draw[color=royalazure!90, fill] (0.8, 2) circle (2pt) node[label={[text=black]270:$P$}] (p_manif) {};
+\draw[color=harvardcrimson!90, fill,rotate around={-35:(3.9, 2.4)}] (3.9, 2.4) ellipse (2.2pt and 1.2pt) node[label={[shift={(0.1,0.15)}, text=black]270:$Q$}] (q_manif) {};
+
+\draw[color=oldmauve!90, fill] (2.4, 2.89) ellipse (2.5pt and 1.3pt) node[label={[shift={(0.1,0.15)},text=black]272.5:$R_\lambda$}] (r_manif) {};
+
+% plot P
+\node[above = 1.1cm of p_manif](pbox) {
+    \begin{tikzpicture}[scale=2]
+    % Bounding box
+    % \draw (-0.1,-0.1) rectangle (1.24,0.74);
+    \draw (0.001, 0.001) rectangle (1,0.7);
+    % Function
+    \def\normalmixP{\x, {
+    0.01 * exp( -((\x-0.19)^2)/ (2 * 0.08 * 0.08) ) + 
+    0.65 * exp( -((\x-0.5)^2)/ (2 * 0.08 * 0.08) ) + 
+    0.34 * exp( -((\x-0.85)^2)/ (2 * 0.05 * 0.05) )
+    }}
+    % Plot
+    \draw[color=royalazure, preaction={fill=blue!60, fill opacity=0.2}, fill opacity=0.2, pattern=fivepointed stars, pattern color=blue, domain=0.15:1,smooth] (0.15, 0) -- plot (\normalmixP) -- (1, 0);
+    % Axes
+    % \draw[thick,->] (0,0) -- (1.2,0) node[below, xshift=-1.3cm, yshift=0.1cm] {\tiny Text};
+    % \draw[thick,->] (0,0) -- (0,0.7) node[left, rotate=90, xshift=-0.18cm, yshift=0.08cm] {\tiny Probability};
+    % \draw[thick,->] (0,0) -- (1.2,0) node[right] {};
+    % \draw[thick,->] (0,0) -- (0,0.7) node[above] {};
+    % label
+    \node at (0.91, 0.47) {$P$};
+    \end{tikzpicture}
+};
+
+% plot Q
+\node[above right= 0.65cm and 0cm of q_manif](qbox) {
+\begin{tikzpicture}[scale=2]
+    % Bounding box
+    \draw (0.001, 0.001) rectangle (1,0.7);
+    % Function
+    \def\normalmixQ{\x, {
+    0.4 * exp( -((\x-0.21)^2)/ (2 * 0.08 * 0.08) ) + 
+    0.6 * exp( -((\x-0.59)^2)/ (2 * 0.08 * 0.08) )
+    }}
+    % plot
+    % \draw[color=harvardcrimson,fill=red!15,domain=0:1,smooth] (0, 0) -- plot (\normalmixQ) -- (1, 0);
+    \draw[color=harvardcrimson, preaction={fill=red!60, fill opacity=0.2}, fill opacity=0.2, pattern=dots, pattern color=red, domain=0:0.9,smooth] (0, 0) -- plot (\normalmixQ) -- (0.9, 0);
+    % axes
+    % \draw[thick,->] (0,0) -- (1.2,0) node[below, xshift=-1.3cm, yshift=0.1cm] {\tiny Text};
+    % \draw[thick,->] (0,0) -- (0,0.7) node[left, rotate=90, xshift=-0.18cm, yshift=0.08cm] {\tiny Probability};
+    % label
+    \node at (0.78, 0.46) {$Q$};
+    \end{tikzpicture}
+};
+
+\draw[->, bend left, dotted, very thick, color=royalazure] (p_manif) to (pbox) ;
+\draw[->, bend right, dotted, very thick, color=harvardcrimson] (q_manif) to (qbox.270) ;
+\end{tikzpicture}

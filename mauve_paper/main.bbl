@@ -1,0 +1,418 @@
+\begin{thebibliography}{65}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ackley et~al.(1985)Ackley, Hinton, and Sejnowski]{ackley1985learning}
+D.~H. Ackley, G.~E. Hinton, and T.~J. Sejnowski.
+\newblock {A learning algorithm for Boltzmann machines}.
+\newblock \emph{Cognitive science}, 9\penalty0 (1):\penalty0 147--169, 1985.
+
+\bibitem[Banerjee and Lavie(2005)]{banerjee2005meteor}
+S.~Banerjee and A.~Lavie.
+\newblock {METEOR}: An automatic metric for {MT} evaluation with improved
+  correlation with human judgments.
+\newblock In \emph{Proc. of {ACL} Workshop on Intrinsic and Extrinsic
+  Evaluation Measures for Machine Translation and/or Summarization}, pages
+  65--72, 2005.
+
+\bibitem[Belz et~al.(2020)Belz, Mille, and Howcroft]{belz2020disentangling}
+A.~Belz, S.~Mille, and D.~M. Howcroft.
+\newblock {Disentangling the Properties of Human Evaluation Methods: A
+  Classification System to Support Comparability, Meta-Evaluation and
+  Reproducibility Testing}.
+\newblock In \emph{Proc. of INLG}, pages 183--194, 2020.
+
+\bibitem[Bender et~al.(2021)Bender, Gebru, McMillan-Major, and
+  Shmitchell]{bender2021parrots}
+E.~M. Bender, T.~Gebru, A.~McMillan-Major, and S.~Shmitchell.
+\newblock {On the Dangers of Stochastic Parrots: Can Language Models Be Too
+  Big?}
+\newblock In \emph{Proc. of FAccT}, 2021.
+
+\bibitem[Bińkowski et~al.(2018)Bińkowski, Sutherland, Arbel, and
+  Gretton]{bikowski2018demystifying}
+M.~Bińkowski, D.~J. Sutherland, M.~Arbel, and A.~Gretton.
+\newblock Demystifying {MMD} {GAN}s.
+\newblock In \emph{Proc. of ICLR}, 2018.
+
+\bibitem[Brown et~al.(2020)Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal,
+  Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert{-}Voss, Krueger,
+  Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin,
+  Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and
+  Amodei]{brown2020language}
+T.~B. Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell, S.~Agarwal,
+  A.~Herbert{-}Voss, G.~Krueger, T.~Henighan, R.~Child, A.~Ramesh, D.~M.
+  Ziegler, J.~Wu, C.~Winter, C.~Hesse, M.~Chen, E.~Sigler, M.~Litwin, S.~Gray,
+  B.~Chess, J.~Clark, C.~Berner, S.~McCandlish, A.~Radford, I.~Sutskever, and
+  D.~Amodei.
+\newblock {Language Models are Few-Shot Learners}.
+\newblock In \emph{Proc. of NeurIPS}, 2020.
+
+\bibitem[Caccia et~al.(2020)Caccia, Caccia, Fedus, Larochelle, Pineau, and
+  Charlin]{Caccia2020Language}
+M.~Caccia, L.~Caccia, W.~Fedus, H.~Larochelle, J.~Pineau, and L.~Charlin.
+\newblock {Language {GAN}s Falling Short}.
+\newblock In \emph{Proc. of ICLR}, 2020.
+
+\bibitem[Celikyilmaz et~al.(2020)Celikyilmaz, Clark, and
+  Gao]{celikyilmaz2020evaluation}
+A.~Celikyilmaz, E.~Clark, and J.~Gao.
+\newblock {Evaluation of Text Generation: {A} Survey}.
+\newblock \emph{arXiv Preprint}, 2020.
+
+\bibitem[Clark et~al.(2019)Clark, Celikyilmaz, and Smith]{clark2019sentence}
+E.~Clark, A.~Celikyilmaz, and N.~A. Smith.
+\newblock {Sentence Mover{'}s Similarity: Automatic Evaluation for
+  Multi-Sentence Texts}.
+\newblock In \emph{Proc. of ACL}, 2019.
+
+\bibitem[Clark et~al.(2021)Clark, August, Serrano, Haduong, Gururangan, and
+  Smith]{clark2021all}
+E.~Clark, T.~August, S.~Serrano, N.~Haduong, S.~Gururangan, and N.~A. Smith.
+\newblock {All That{'}s {`}Human{'} Is Not Gold: Evaluating Human Evaluation of
+  Generated Text}.
+\newblock In \emph{Proc. of ACL}, 2021.
+
+\bibitem[Cl{\'{e}}men{\c{c}}on and Vayatis(2009)]{clemencon2009precision}
+S.~Cl{\'{e}}men{\c{c}}on and N.~Vayatis.
+\newblock Nonparametric estimation of the precision-recall curve.
+\newblock In \emph{Proc. of ICML}, pages 185--192, 2009.
+
+\bibitem[Cl{\'e}men{\c{c}}on and Vayatis(2010)]{clemenccon2010overlaying}
+S.~Cl{\'e}men{\c{c}}on and N.~Vayatis.
+\newblock Overlaying classifiers: a practical approach to optimal scoring.
+\newblock \emph{Constructive Approximation}, 32:\penalty0 619--648, 2010.
+
+\bibitem[Cortes and Mohri(2005)]{cortes2005confidence}
+C.~Cortes and M.~Mohri.
+\newblock Confidence intervals for the area under the {ROC} curve.
+\newblock In \emph{Proc. of NeurIPS}, volume~17, 2005.
+
+\bibitem[Devlin et~al.(2019)Devlin, Chang, Lee, and Toutanova]{devlin2018bert}
+J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova.
+\newblock {BERT: Pre-training of Deep Bidirectional Transformers for Language
+  Understanding}.
+\newblock In \emph{Proc. of NAACL}, pages 4171--4186, 2019.
+
+\bibitem[Dinan et~al.(2019)Dinan, Logacheva, Malykh, Miller, Shuster, Urbanek,
+  Kiela, Szlam, Serban, Lowe, Prabhumoye, Black, Rudnicky, Williams, Pineau,
+  Burtsev, and Weston]{dinan2019second}
+E.~Dinan, V.~Logacheva, V.~Malykh, A.~Miller, K.~Shuster, J.~Urbanek, D.~Kiela,
+  A.~Szlam, I.~Serban, R.~Lowe, S.~Prabhumoye, A.~W. Black, A.~Rudnicky,
+  J.~Williams, J.~Pineau, M.~Burtsev, and J.~Weston.
+\newblock {The Second Conversational Intelligence Challenge (ConvAI2)}, 2019.
+
+\bibitem[Djolonga et~al.(2020)Djolonga, Lucic, Cuturi, Bachem, Bousquet, and
+  Gelly]{djolonga2020precision}
+J.~Djolonga, M.~Lucic, M.~Cuturi, O.~Bachem, O.~Bousquet, and S.~Gelly.
+\newblock {Precision-Recall Curves Using Information Divergence Frontiers}.
+\newblock In \emph{Proc. of AISTATS}, pages 2550--2559, 2020.
+
+\bibitem[Eikema and Aziz(2020)]{eikema2020map}
+B.~Eikema and W.~Aziz.
+\newblock {Is MAP Decoding All You Need? The Inadequacy of the Mode in Neural
+  Machine Translation}.
+\newblock In \emph{Proc. of CoLING}, 2020.
+
+\bibitem[Fan et~al.(2018)Fan, Lewis, and Dauphin]{fan2018heirarchical}
+A.~Fan, M.~Lewis, and Y.~N. Dauphin.
+\newblock {Hierarchical Neural Story Generation}.
+\newblock In \emph{Proc. of ACL}, pages 889--898, 2018.
+
+\bibitem[Flach(2012)]{flach2012machine}
+P.~Flach.
+\newblock \emph{Machine Learning: The Art and Science of Algorithms That Make
+  Sense of Data}.
+\newblock Cambridge University Press, 2012.
+
+\bibitem[Goodfellow et~al.(2014)Goodfellow, Pouget-Abadie, Mirza, Xu,
+  Warde-Farley, Ozair, Courville, and Bengio]{goodfellow2014generative}
+I.~J. Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
+  A.~Courville, and Y.~Bengio.
+\newblock {Generative Adversarial Networks}.
+\newblock In \emph{Proc. of NeurIPS}, 2014.
+
+\bibitem[Guan and Huang(2020)]{guan2020union}
+J.~Guan and M.~Huang.
+\newblock {{UNION:} An Unreferenced Metric for Evaluating Open-ended Story
+  Generation}.
+\newblock In \emph{Proc. of EMNLP}, pages 9157--9166, 2020.
+
+\bibitem[H{\"a}m{\"a}l{\"a}inen and Solin(2020)]{hamalainen2020deep}
+P.~H{\"a}m{\"a}l{\"a}inen and A.~Solin.
+\newblock {Deep Residual Mixture Models}.
+\newblock \emph{arXiv preprint}, 2020.
+
+\bibitem[Han and Kobayashi(2007)]{kobayashi2007mathematics}
+T.~S. Han and K.~Kobayashi.
+\newblock \emph{Mathematics of Information and Coding}, volume 203.
+\newblock American Mathematical Soc., 2007.
+
+\bibitem[Hashimoto et~al.(2019)Hashimoto, Zhang, and
+  Liang]{hashimoto2019unifying}
+T.~Hashimoto, H.~Zhang, and P.~Liang.
+\newblock Unifying human and statistical evaluation for natural language
+  generation.
+\newblock In \emph{Proc. of NAACL}, pages 1689--1701, 2019.
+
+\bibitem[Heusel et~al.(2017)Heusel, Ramsauer, Unterthiner, Nessler, and
+  Hochreiter]{heusel2017gans}
+M.~Heusel, H.~Ramsauer, T.~Unterthiner, B.~Nessler, and S.~Hochreiter.
+\newblock {GANs Trained by a Two Time-Scale Update Rule Converge to a Local
+  Nash Equilibrium}.
+\newblock In \emph{Proc. of NeurIPS}, page 6629–6640, 2017.
+
+\bibitem[Holtzman et~al.(2020)Holtzman, Buys, Forbes, and
+  Choi]{holtzman2019curious}
+A.~Holtzman, J.~Buys, M.~Forbes, and Y.~Choi.
+\newblock {The Curious Case of Neural Text Degeneration}.
+\newblock In \emph{Proc. of ICLR}, 2020.
+
+\bibitem[Hunter(2004)]{hunter2004mm}
+D.~R. Hunter.
+\newblock {MM algorithms for generalized Bradley-Terry models}.
+\newblock \emph{The Annals of Statistics}, 32\penalty0 (1):\penalty0 384--406,
+  2004.
+
+\bibitem[Ippolito et~al.(2020)Ippolito, Duckworth, Callison-Burch, and
+  Eck]{ippolito2020automatic}
+D.~Ippolito, D.~Duckworth, C.~Callison-Burch, and D.~Eck.
+\newblock {Automatic Detection of Generated Text is Easiest when Humans are
+  Fooled}.
+\newblock In \emph{Proc. of ACL}, pages 1808--1822, July 2020.
+
+\bibitem[Karpinska et~al.(2021)Karpinska, Akoury, and
+  Iyyer]{karpinska2021perils}
+M.~Karpinska, N.~Akoury, and M.~Iyyer.
+\newblock {The Perils of Using Mechanical Turk to Evaluate Open-Ended Text
+  Generation}.
+\newblock In \emph{Proc. of EMNLP}, 2021.
+
+\bibitem[Kusner et~al.(2015)Kusner, Sun, Kolkin, and
+  Weinberger]{kusner2015word}
+M.~Kusner, Y.~Sun, N.~Kolkin, and K.~Weinberger.
+\newblock {From Word Embeddings to Document Distances}.
+\newblock In \emph{Proc. of ICML}, pages 957--966. PMLR, 2015.
+
+\bibitem[Kynk\"a\"anniemi et~al.(2019)Kynk\"a\"anniemi, Karras, Laine,
+  Lehtinen, and Aila]{kynknniemi2019improved}
+T.~Kynk\"a\"anniemi, T.~Karras, S.~Laine, J.~Lehtinen, and T.~Aila.
+\newblock {Improved Precision and Recall Metric for Assessing Generative
+  Models}.
+\newblock In \emph{Proc. of NeurIPS}, 2019.
+
+\bibitem[Lin(2004)]{lin2004rouge}
+C.-Y. Lin.
+\newblock {ROUGE: A Package for Automatic Evaluation of Summaries}.
+\newblock In \emph{Text Summarization Branches Out}, pages 74--81, 2004.
+
+\bibitem[Liu et~al.(2021)Liu, Pillutla, Welleck, Oh, Choi, and
+  Harchaoui]{liu2021divergence}
+L.~Liu, K.~Pillutla, S.~Welleck, S.~Oh, Y.~Choi, and Z.~Harchaoui.
+\newblock {Divergence Frontiers for Generative Models: Sample Complexity,
+  Quantization Effects, and Frontier Integrals}.
+\newblock In \emph{NeurIPS}, 2021.
+
+\bibitem[Liu et~al.(2019)Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis,
+  Zettlemoyer, and Stoyanov]{liu2019roberta}
+Y.~Liu, M.~Ott, N.~Goyal, J.~Du, M.~Joshi, D.~Chen, O.~Levy, M.~Lewis,
+  L.~Zettlemoyer, and V.~Stoyanov.
+\newblock {RoBERTa: {A} Robustly Optimized {BERT} Pretraining Approach}.
+\newblock \emph{arXiv Preprint}, 2019.
+
+\bibitem[Lopez{-}Paz and Oquab(2017)]{lopezpaz2017revisiting}
+D.~Lopez{-}Paz and M.~Oquab.
+\newblock {Revisiting Classifier Two-Sample Tests}.
+\newblock In \emph{Proc. of ICLR}, 2017.
+
+\bibitem[Manning and Sch{\"{u}}tze(2001)]{manning2001foundations}
+C.~D. Manning and H.~Sch{\"{u}}tze.
+\newblock \emph{{Foundations of Statistical Natural Language Processing}}.
+\newblock {MIT} Press, 2001.
+\newblock ISBN 978-0-262-13360-9.
+
+\bibitem[Marden(1995)]{bt:book:1995}
+J.~I. Marden.
+\newblock \emph{Analyzing and modeling rank data}, volume~64 of
+  \emph{Monographs on Statistics and Applied Probability}.
+\newblock Chapman \& Hall, London, 1995.
+\newblock ISBN 0-412-99521-2.
+
+\bibitem[Martins and Astudillo(2016)]{martins2016softmax}
+A.~Martins and R.~Astudillo.
+\newblock {From Softmax to Sparsemax: A Sparse model of Attention and
+  Multi-label Classification}.
+\newblock In \emph{Proc. of ICML}, pages 1614--1623. PMLR, 2016.
+
+\bibitem[Martins et~al.(2020)Martins, Marinho, and Martins]{martins2020sparse}
+P.~H. Martins, Z.~Marinho, and A.~F.~T. Martins.
+\newblock {Sparse Text Generation}.
+\newblock In \emph{Proc. EMNLP}, pages 4252--4273, 2020.
+
+\bibitem[Massarelli et~al.(2019)Massarelli, Petroni, Piktus, Ott,
+  Rockt{\"a}schel, Plachouras, Silvestri, and Riedel]{massarelli2019decoding}
+L.~Massarelli, F.~Petroni, A.~Piktus, M.~Ott, T.~Rockt{\"a}schel,
+  V.~Plachouras, F.~Silvestri, and S.~Riedel.
+\newblock {How Decoding Strategies Affect the Verifiability of Generated Text}.
+\newblock \emph{arXiv preprint arXiv:1911.03587}, 2019.
+
+\bibitem[Miettinen(2012)]{miettinen2012nonlinear}
+K.~Miettinen.
+\newblock \emph{{Nonlinear Multiobjective Optimization}}, volume~12.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem[Novikova et~al.(2017)Novikova, Du{\v{s}}ek, Cercas~Curry, and
+  Rieser]{novikova2017need}
+J.~Novikova, O.~Du{\v{s}}ek, A.~Cercas~Curry, and V.~Rieser.
+\newblock {Why We Need New Evaluation Metrics for {NLG}}.
+\newblock In \emph{Proc. of EMNLP}, 2017.
+
+\bibitem[Opitz and Frank(2021)]{optiz2021towards}
+J.~Opitz and A.~Frank.
+\newblock {Towards a Decomposable Metric for Explainable Evaluation of Text
+  Generation from {AMR}}.
+\newblock In \emph{Proc. of EACL}, pages 1504--1518, 2021.
+
+\bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and
+  Zhu]{papineni2002bleu}
+K.~Papineni, S.~Roukos, T.~Ward, and W.-J. Zhu.
+\newblock {BLEU: a Method for Automatic Evaluation of Machine Translation}.
+\newblock In \emph{Proc. of ACL}, pages 311--318, 2002.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, and
+  Sutskever]{radford2019language}
+A.~Radford, J.~Wu, R.~Child, D.~Luan, D.~Amodei, and I.~Sutskever.
+\newblock {Language Models are Unsupervised Multitask Learners}.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Rashkin et~al.(2020)Rashkin, Celikyilmaz, Choi, and
+  Gao]{rashkin2020plotmachines}
+H.~Rashkin, A.~Celikyilmaz, Y.~Choi, and J.~Gao.
+\newblock {PlotTMachines: Outline-Conditioned Generation with Dynamic Plot
+  State Tracking}.
+\newblock \emph{arXiv Preprint}, 2020.
+
+\bibitem[Sablayrolles et~al.(2019)Sablayrolles, Douze, Schmid, and
+  J{\'e}gou]{sablayrolles2018spreading}
+A.~Sablayrolles, M.~Douze, C.~Schmid, and H.~J{\'e}gou.
+\newblock {Spreading vectors for similarity search}.
+\newblock In \emph{Proc. of ICLR}, 2019.
+
+\bibitem[Sai et~al.(2020)Sai, Mohankumar, and Khapra]{sai2020survey}
+A.~B. Sai, A.~K. Mohankumar, and M.~M. Khapra.
+\newblock {A Survey of Evaluation Metrics Used for NLG Systems}.
+\newblock \emph{arXiv Preprint}, 2020.
+
+\bibitem[Sajjadi et~al.(2018)Sajjadi, Bachem, Lucic, Bousquet, and
+  Gelly]{sajjadi2018assessing}
+M.~S.~M. Sajjadi, O.~Bachem, M.~Lucic, O.~Bousquet, and S.~Gelly.
+\newblock Assessing generative models via precision and recall.
+\newblock In \emph{Proc. of NeurIPS}, 2018.
+
+\bibitem[Salimans et~al.(2016)Salimans, Goodfellow, Zaremba, Cheung, Radford,
+  and Chen]{salimans2016improved}
+T.~Salimans, I.~Goodfellow, W.~Zaremba, V.~Cheung, A.~Radford, and X.~Chen.
+\newblock {Improved Techniques for Training {GAN}s}, 2016.
+
+\bibitem[Sellam et~al.(2020)Sellam, Das, and Parikh]{sellam2020bleurt}
+T.~Sellam, D.~Das, and A.~P. Parikh.
+\newblock {BLEURT: Learning Robust Metrics for Text Generation}.
+\newblock In \emph{Proc. of ACL}, pages 7881--7892, 2020.
+
+\bibitem[Semeniuta et~al.(2018)Semeniuta, Severyn, and
+  Gelly]{semeniuta2018accurate}
+S.~Semeniuta, A.~Severyn, and S.~Gelly.
+\newblock {On Accurate Evaluation of GANs for Language Generation}, 2018.
+\newblock arXiv Preprint.
+
+\bibitem[Shimanaka et~al.(2018)Shimanaka, Kajiwara, and
+  Komachi]{shimanaka2018ruse}
+H.~Shimanaka, T.~Kajiwara, and M.~Komachi.
+\newblock {RUSE: Regressor Using Sentence Embeddingsfor Automatic Machine
+  Translation Evaluation}.
+\newblock In \emph{Proc. of Conference on Machine Translation}, pages 751--758,
+  2018.
+
+\bibitem[Shimorina and Belz(2021)]{shimorina2021human}
+A.~Shimorina and A.~Belz.
+\newblock {The Human Evaluation Datasheet 1.0: A Template for Recording Details
+  of Human Evaluation Experiments in NLP}.
+\newblock \emph{arXiv Preprint}, 2021.
+
+\bibitem[Tao et~al.(2018)Tao, Mou, Zhao, and Yan]{tao2018ruber}
+C.~Tao, L.~Mou, D.~Zhao, and R.~Yan.
+\newblock {RUBER: An Unsupervised Method for Automatic Evaluation of
+  Open-Domain Dialog Systems}.
+\newblock In \emph{Proc. of AAAI}, 2018.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  L.~Kaiser, and I.~Polosukhin.
+\newblock {Attention is All you Need}.
+\newblock In \emph{Proc. of NeurIPS}, pages 5998--6008, 2017.
+
+\bibitem[Villani(2021)]{villani2021topics}
+C.~Villani.
+\newblock \emph{{Topics in Optimal Transportation}}, volume~58.
+\newblock American Mathematical Soc., 2021.
+
+\bibitem[Welleck et~al.(2020{\natexlab{a}})Welleck, Kulikov, Kim, Pang, and
+  Cho]{welleck2020consistency}
+S.~Welleck, I.~Kulikov, J.~Kim, R.~Y. Pang, and K.~Cho.
+\newblock {Consistency of a Recurrent Language Model With Respect to Incomplete
+  Decoding}.
+\newblock In \emph{Proc. of EMNLP}, pages 5553--5568, 2020{\natexlab{a}}.
+
+\bibitem[Welleck et~al.(2020{\natexlab{b}})Welleck, Kulikov, Roller, Dinan,
+  Cho, and Weston]{welleck2020neural}
+S.~Welleck, I.~Kulikov, S.~Roller, E.~Dinan, K.~Cho, and J.~Weston.
+\newblock {Neural Text Generation With Unlikelihood Training}.
+\newblock In \emph{Proc. of ICLR}, 2020{\natexlab{b}}.
+
+\bibitem[Wolf et~al.(2020)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
+  Rault, Louf, Funtowicz, Davison, Shleifer, von Platen, Ma, Jernite, Plu, Xu,
+  Scao, Gugger, Drame, Lhoest, and Rush]{wolf2020transformers}
+T.~Wolf, L.~Debut, V.~Sanh, J.~Chaumond, C.~Delangue, A.~Moi, P.~Cistac,
+  T.~Rault, R.~Louf, M.~Funtowicz, J.~Davison, S.~Shleifer, P.~von Platen,
+  C.~Ma, Y.~Jernite, J.~Plu, C.~Xu, T.~L. Scao, S.~Gugger, M.~Drame, Q.~Lhoest,
+  and A.~M. Rush.
+\newblock {Transformers: State-of-the-Art Natural Language Processing}.
+\newblock In \emph{Proc. of EMNLP}, pages 38--45, 10 2020.
+
+\bibitem[Zellers et~al.(2019)Zellers, Holtzman, Rashkin, Bisk, Farhadi,
+  Roesner, and Choi]{zellers2019grover}
+R.~Zellers, A.~Holtzman, H.~Rashkin, Y.~Bisk, A.~Farhadi, F.~Roesner, and
+  Y.~Choi.
+\newblock {Defending Against Neural Fake News}.
+\newblock In \emph{Proc. of NeurIPS}, 2019.
+
+\bibitem[Zhang et~al.(2021)Zhang, Duckworth, Ippolito, and
+  Neelakantan]{zhang2020trading}
+H.~Zhang, D.~Duckworth, D.~Ippolito, and A.~Neelakantan.
+\newblock Trading off diversity and quality in natural language generation.
+\newblock In \emph{Proc. of HumEval}, pages 25--33, 2021.
+
+\bibitem[Zhang et~al.(2020)Zhang, Kishore, Wu, Weinberger, and
+  Artzi]{zhang2020bertscore}
+T.~Zhang, V.~Kishore, F.~Wu, K.~Q. Weinberger, and Y.~Artzi.
+\newblock {BERTScore}: Evaluating text generation with {BERT}.
+\newblock In \emph{Proc. of ICLR}, 2020.
+
+\bibitem[Zhao et~al.(2019)Zhao, Peyrard, Liu, Gao, Meyer, and
+  Eger]{zhao2019moverscore}
+W.~Zhao, M.~Peyrard, F.~Liu, Y.~Gao, C.~M. Meyer, and S.~Eger.
+\newblock {MoverScore: Text Generation Evaluating with Contextualized
+  Embeddings and Earth Mover Distance}.
+\newblock In \emph{Proc. of EMNLP}, 2019.
+
+\bibitem[Zhu et~al.(2018)Zhu, Lu, Zheng, Guo, Zhang, Wang, and
+  Yu]{zhu2018texygen}
+Y.~Zhu, S.~Lu, L.~Zheng, J.~Guo, W.~Zhang, J.~Wang, and Y.~Yu.
+\newblock {Texygen: A Benchmarking Platform for Text Generation Models}, 2018.
+
+\end{thebibliography}
