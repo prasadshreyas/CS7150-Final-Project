@@ -7,10 +7,9 @@ To run the code in this project, you will need:
 
 Python 3.6 or later
 The following Python packages:
-
-NumPy
-Pandas
-Matplotlib
-Seaborn
-Transformers
-Mauve
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Transformers
+- Mauve
