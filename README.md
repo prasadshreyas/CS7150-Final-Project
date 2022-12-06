@@ -1,19 +1,16 @@
-# Class Project Website Template
+# Class Project
 
-Copy this template on github, and rename the repo to the name of your project.
+This project contains a review of existing methods for evaluating open-ended text generation systems. Open-ended text generation is a challenging task, and there is no clear consensus on how to evaluate the quality of the generated text. This review provides an overview of the various evaluation methods that have been proposed in the literature, and discusses their strengths and weaknesses. We have also 
 
-Then go to the repo "Settings" and change "Webhook" settings, to "Add a webhook."
+Requirements
+To run the code in this project, you will need:
 
-Set up the webhook exactly as you see in the image below, so that it sends
-JSON push notifications to `https://expo.baulab.info/push`.  To work, it will
-need to have the secret pictured.
+Python 3.6 or later
+The following Python packages:
 
-<img src="webhook.png" style="max-width:100%">
-
-Then whenever you push your website, it will show up on
-https://expo.baulab.info/2022-Fall/[username].  Customize your
-`index.html`.
-
-Your final project report will be a static HTML website that
-shares your insights.  As you develop your
-methods, results, and narrative, add content as needed here.
+NumPy
+Pandas
+Matplotlib
+Seaborn
+Transformers
+Mauve
