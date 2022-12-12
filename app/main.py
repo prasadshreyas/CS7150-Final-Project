@@ -14,6 +14,10 @@ st.sidebar.markdown("""
 """)
 
 
+st.caption(""" <p style='text-align: center;'> CS7150: Deep Learning | Northeastern University </p>""" , unsafe_allow_html=True)
+st.caption(""" <p style='text-align: center;'> Shreyas Prasad, 2022-12-09</p>""" , unsafe_allow_html=True)
+
+
 
 
 # ------------------------- Title ------------------------- #
@@ -21,6 +25,12 @@ st.sidebar.markdown("""
 # Center the title and subtitles
 st.markdown( """ <h1 style='text-align: center;'> Evaluation metrics for open-ended text generation: A review</h1> """, unsafe_allow_html=True)
 st.markdown( """ <h4 style='text-align: center;'> <i> with a special focus on the state-of-the-art metric: MAUVE </i></h4> """, unsafe_allow_html=True)
+
+
+
+
+
+
 
 
 
@@ -159,10 +169,6 @@ Let $P$ be the probability distribution of the human text and $Q$ be the probabi
 - **Type I error (FP)**: The model assigns a high probability to a sequence that has a low probability in the human generated text which is unlike written by humans. This is a false positive error.
 - **Type II error (TN)**: The model assigns a low probability to a sequence that has a high probability in the human generated text. An indication that the model is not able to generate text like human text. This is a false negative error.
 
-"""
-)
-
-st.markdown("""
 #### KL Divergence
 
 $$KL(P || Q) = \sum_{x \in \mathcal{X}} P(x) \log \\frac{P(x)}{Q(x)}$$
@@ -230,6 +236,49 @@ By exponetiating the two KL divergences and varying $\lambda$, we can get a curv
 $$C(P, Q) = \Big\{ \\big(\exp(-c\, KL(Q|R_\lambda)), \exp(-c\, KL(P|R_\lambda)) \\big) \Big\}_{\lambda \in [0, 1]}$$ 
 
 where $c$ is a hyperparameter for scaling.
+
+
+> Insert Figure 1 here
+
+
+The metric is defined as  
+
+$$\\text{MAUVE}(P,Q)$$
+
+as the area under the curve $C(P, Q)$,  providing the summary of the trade-off between Type I and Type II errors. 
+
+
+##### Problems with $P$
+
+
+So, if given two distributions $P$ and $Q$, we can compute the area under the curve $C(P, Q)$ to get the metric $\\text{MAUVE}(P,Q)$. But the **problem** is that we do not have access to the true distribution $P$ and also the support of $P$ is large since it is the set of all possible tokens.
+
+Authors solve these two problems by using the following two techniques:
+1. Use samples $x_i$ from the true distribution $P$ and sample $\\tilde{x}_i$ from the model distribution $Q$ to approximate the true distribution $P$ and the model distribution $Q$ respectively.
+2. Use a "quantized embedding space that is sensitive to important features of text"
+
+The quantized embedding space is embeddings space of a large language model (e.g. GPT-2). With this quantized embedding space, the support of the distributions is restricted to a finite set of vectors.
+
+This is obtained by passing the samples $x_i$ and $\\tilde{x}_i$ through a large language model (e.g. GPT-2) and using the output of the last layer as the embedding vector for the sample.
+After obtaining a set of embedding vectors for the samples, the authors use a clustering algorithm to group the embedding vectors into a finite set of $k$. The clusters are then used as the support of the true distribution $P$ and the model distribution $Q$.
+After the clustering, the number of samples from the true distribution $P$ and the model distribution $Q$ are counted in each cluster. By only counting the samples in each cluster, the support of the distributions is restricted to a finite set of $k$ eliminating the problem of infinite KL divergence.
+
+So now you have $\\tilde{P}$ and $\\tilde{Q}$, which are  "a piecewise constant" approximations of the true distribution $P$ and the model distribution $Q$ respectively. These approximations are then used to compute the area under the curve $C(\\tilde{P}, \\tilde{Q})$ to get the metric $\\text{MAUVE}(\\tilde{P}, \\tilde{Q})$.
+
+#### Advantages over other metrics
+
+The authors have demonstrated that the metric $\\text{MAUVE}(\\tilde{P}, \\tilde{Q})$ is better than other metrics in the following ways:
+
+1. Identification of quality differences between decoding algorithms. 
+1. Quantification of quality differences due to model size.
+2. Caputures the quality differences due to generation length.
+
+
+#### Limitations
+1. Arbitrary number of clusters $k$ is used to approximate the true distribution $P$ and the model distribution $Q$. This is a hyperparameter that needs to be tuned.
+2. There are a lot of approximations in the process of obtaining $\\tilde{P}$ and $\\tilde{Q}$ from $P$ and $Q$ respectively. While these transformations doesn't guarantee unbiasedness in the KL estimations it allows tractability of calculations.
+3. As this is not an absolute metric, this metric can be used as an objective function to optimize the model achieving a higher score on the metric, not guaranteeing a negative impact on the model's performance on other metrics.
+
 
 """)
 
