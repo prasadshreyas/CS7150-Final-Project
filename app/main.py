@@ -10,6 +10,11 @@ st.sidebar.markdown("""
 - [The Problem](#the-problem)
 - [MAUVE](#mauve)
     - [How to quantify quality and diversity?](#how-to-quantify-quality-and-diversity)
+    - [The Algorithm](#the-algorithm)
+    - [Advantages](#Advantages-over-other-metrics)
+    - [Limitations](#limitations)
+- [Results](#Results)
+- [References](#references)
 
 """)
 
@@ -25,11 +30,6 @@ st.caption(""" <p style='text-align: center;'> Shreyas Prasad, 2022-12-09</p>"""
 # Center the title and subtitles
 st.markdown( """ <h1 style='text-align: center;'> Evaluation metrics for open-ended text generation: A review</h1> """, unsafe_allow_html=True)
 st.markdown( """ <h4 style='text-align: center;'> <i> with a special focus on the state-of-the-art metric: MAUVE </i></h4> """, unsafe_allow_html=True)
-
-
-
-
-
 
 
 
@@ -59,10 +59,8 @@ st.write("""
 Evaluating the performance of text generation models is a crucial step in their development because it helps to determine how well the models are able to generate realistic and coherent text. Here are a few reasons:
 - The quality of the generated text is one of the key factors that determines the usefulness of a text generation model. 
 - Evaluating the generated text is important for comparing different text generation models.
-- Rvaluating the generated text is also important for understanding the limitations of text generation models.
+- Evaluating the generated text is also important for understanding the limitations of text generation models.
 """)
-
-
 
 
 
@@ -78,6 +76,7 @@ st.markdown("""
 #### Statistical
 
 #####  Perplexity
+
     
 Perplexity is a common metric for evaluating language models. It is defined as the inverse probability of the test data. Mathematically, it is the exponentiation of cross entropy.
 
@@ -118,12 +117,8 @@ Generation perplexity is a measure of the quality of a language model that is ca
 - Generation perplexity only provides a partial evaluation of the quality of the generated text. By calculating the average cross-entropy of the model's predictions on a generated dataset, generation perplexity only provides information about the accuracy of the model's predictions, and it does not take into account other aspects of the generated text such as its content or its relevance to a given prompt.
 - Generation perplexity can be sensitive to the choice of generated dataset. The value of the generation perplexity metric can depend heavily on the specific dataset used to calculate it, and it can be affected by factors such as the length of the generated text, the diversity of the generated text, and the difficulty of the prompts used to generate the text. Even decoding algorithms that produce similar results can produce different values of the generation perplexity metric, depending on the specific dataset used to calculate it.
 
-""")
-
-
-st.markdown("""
 #### Reference-based
-##### Self-BLEU
+##### Self-BLEU [2](#2-zhu-yaoming-et-al-texygen-a-benchmarking-platform-for-text-generation-models-the-41st-international-acm-sigir-conference-on-research-development-in-information-retrieval-2018)
 
 BLEU(BiLingual Evaluation Understudy) that measures the similarity between the generated text and the reference text. BLEU(N) is the number of n-grams in the candidate summary that are also in the reference summary. Self-BLEU is a metric based on BLEU which calculates the  number of n-grams in the generated text that are also in the reference text [7].
 
@@ -137,6 +132,18 @@ BLEU(BiLingual Evaluation Understudy) that measures the similarity between the g
 - The higher the self-BLEU(N), the more similar the generated text is to the reference text. Note that it is possible to have a model with a high Self-BLEU(N) that is not a good model.
 - For example, self-BLEU(N) = 1, it means that all n-grams in the generated text are also in the reference text, which implies reference = model and which also implies that there is no diversity in the generated text.
 - Self-BLEU also suffers from its quadratic runtime complexity as for each sample text, we need to calculate a BLEU score between that sample and the whole reference text.
+
+#### Human based
+
+Humans are really good at evaluating the quality of the text, but not at evaluating the diversity of the text. More often than not, they tend to not catch under diversity. For example, if the model plagiarizes from the training set, humans cannot quantify diversity. Hence, zero generalization ability and thus have inadequate diversity.
+
+##### Human + Statistical
+
+Human + Statistical evaluation captures both quality and diversity. Metrics like HUSE [3](/#3-hashimoto-tatsunori-b-hugh-zhang-and-percy-liang-unifying-human-and-statistical-evaluation-for-natural-language-generation-arxiv-preprint-arxiv-1904-02792-2019) are a good example of this.
+However, it is 
+- Expensive to evaluate the model
+- Not scalable
+- Inconsistent. Different humans might evaluate the model differently.
 
 """)
 
@@ -152,7 +159,7 @@ The fundamental problem in the evaluation of open-ended text generation is the l
 # 
 
 st.header("MAUVE")
-st.markdown("""***Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers***""")
+st.markdown("""***Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers*** [1](#1-pillutla-krishna-et-al-mauve-measuring-the-gap-between-neural-text-and-human-text-using-divergence-frontiers-advances-in-neural-information-processing-systems-34-2021-4816-4828)""")
 
 st.subheader("How to quantify quality and diversity?")
 st.markdown(""" The authors of MAUVE quantify both diversity and quality of the generated text with the notion of Type I and Type II errors respectively.
@@ -248,10 +255,13 @@ $$\\text{MAUVE}(P,Q)$$
 as the area under the curve $C(P, Q)$,  providing the summary of the trade-off between Type I and Type II errors. 
 
 
-##### Problems with $P$
+**Problems with P**
 
 
 So, if given two distributions $P$ and $Q$, we can compute the area under the curve $C(P, Q)$ to get the metric $\\text{MAUVE}(P,Q)$. But the **problem** is that we do not have access to the true distribution $P$ and also the support of $P$ is large since it is the set of all possible tokens.
+
+
+#### The Algorithm
 
 Authors solve these two problems by using the following two techniques:
 1. Use samples $x_i$ from the true distribution $P$ and sample $\\tilde{x}_i$ from the model distribution $Q$ to approximate the true distribution $P$ and the model distribution $Q$ respectively.
@@ -279,8 +289,21 @@ The authors have demonstrated that the metric $\\text{MAUVE}(\\tilde{P}, \\tilde
 2. There are a lot of approximations in the process of obtaining $\\tilde{P}$ and $\\tilde{Q}$ from $P$ and $Q$ respectively. While these transformations doesn't guarantee unbiasedness in the KL estimations it allows tractability of calculations.
 3. As this is not an absolute metric, this metric can be used as an objective function to optimize the model achieving a higher score on the metric, not guaranteeing a negative impact on the model's performance on other metrics.
 
+""")
+
+
+st.subheader("References")
+st.markdown("""
+
+###### 1. Pillutla, Krishna, et al. "Mauve: Measuring the gap between neural text and human text using divergence frontiers." Advances in Neural Information Processing Systems 34 (2021): 4816-4828.
+###### 2. Zhu, Yaoming, et al. "Texygen: A benchmarking platform for text generation models." The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval. 2018.
+###### 3. Hashimoto, Tatsunori B., Hugh Zhang, and Percy Liang. "Unifying human and statistical evaluation for natural language generation." arXiv preprint arXiv:1904.02792 (2019).
+
 
 """)
+
+
+
 
 
 
